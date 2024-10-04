@@ -1,0 +1,838 @@
+:root {
+    --primary-color: #29316f;
+    --secondary-color: #f94924;
+    --text-color: #0e0e0e;
+    --background-color: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    /* transition: all 0.3s ease;  */
+}
+
+body {
+    background-color: #fbfbfb;
+    color: #0e0e0e; 
+    line-height: 1.6; 
+    font-size: 16px; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+}
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+
+.top-bar {
+    background-color: var(--primary-color);
+    color: white;
+}
+.top-bar .contact-info {
+    display: flex;
+    gap: 3rem;
+    padding: 15px 0;
+}
+.top-bar .contact-info i {
+    margin-right: 5px;
+}
+.top-bar .quote {
+    background-color: #18205e;
+    padding: 14px 20px;
+    color: white;
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+.navbar-nav .nav-link.active ,
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color);
+}
+.navbar-brand img {
+    height: 40px;
+}
+.navbar .fa-search {
+    color: var(--primary-color);
+}
+
+
+.hero-section {
+    position: relative;
+    background: url('images/banner-img.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
+}
+.hero-section .content {
+    position: relative;
+    z-index: 2;
+    margin-top: 5rem;
+}
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.hero-section h1 .highlight {
+    color: #ff4500;
+}
+.hero-section p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+}
+.hero-section .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+.hero-section .img-fluid {
+    z-index: 2;
+    position: relative;
+}
+.hero-section .btn-primary,
+.hero-section .btn-secondary{
+    border-radius: 25px;
+    font-size: 14px;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover ,
+.btn-secondary:hover{
+    background-color: #565e64;
+    border: none;
+}
+.btn-secondary {
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+
+.strategic-planning {
+    position: relative;
+    background: url('images/banner-img2.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
+}
+.strategic-planning .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+.strategic-planning .container {
+    position: relative;
+    z-index: 2;
+}
+.strategic-planning .card {
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 100%;
+    position: relative;
+    background: url('images/financial-planning.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 10px;
+}
+.strategic-planning .card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+.strategic-planning .card:hover {
+    /* transform: translateY(-10px); */
+    background: url('images/financial-planning2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.strategic-planning .card:hover .overlay {
+    background: rgb(4 16 98 / 80%);
+
+}
+.strategic-planning .card-body {
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+.strategic-planning .card:hover .icon ,
+.strategic-planning .card:hover .card-text ,
+.strategic-planning .card:hover .card-title {
+    color: #d1d1d1;
+}
+.strategic-planning .card .card-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.strategic-planning .card .card-text {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 2;
+}
+.strategic-planning .icon {
+    font-size: 3rem;
+    margin: 1rem 0 3rem 0;
+    color: var(--primary-color);
+}
+.strategic-planning .icon i {
+    color:var(--primary-color);
+}
+.strategic-planning .card:hover .overlay:before {
+    content: "";
+    width: 4px;
+    height: 25%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.revenue-progress {
+    background-color:#f4f7fc;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+}
+.revenue-progress .slider-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.revenue-progress .slider-container .card-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.revenue-progress .slider-container .card {
+    min-width: 30%;
+    transition: transform 0.5s ease;
+    border: none;
+    background-color: transparent;
+    gap: 1rem;
+}
+.revenue-progress .slider-container .card img ,
+.revenue-progress .slider-container .card .card-body{
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.revenue-progress .slider-container .card .card-body{
+    background: #fff;
+    padding: 2rem;
+}
+.revenue-progress .header-text {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.revenue-progress .main-heading {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    width: 65%;
+    margin: auto;
+}
+.revenue-progress .card .card-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.revenue-progress .slider-container .card .card-text {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.revenue-progress .card:hover .card-body {
+    /* background-color: var(--primary-color); */
+    background-image: linear-gradient(rgb(4 16 98 / 85%), rgb(4 16 98 / 85%)), url(images/revenueimages.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.revenue-progress .card:hover .card-title ,
+.revenue-progress .card:hover .card-text {
+    color: #fff;
+}
+.revenue-progress .slider-container .card .card-img {
+    border: none;
+    border-radius: 5px;
+    height: 300px;
+    /* background: url('images/revenue1.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.revenue-progress .slide-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 2rem;
+}
+.btn-slide {
+    border: none;
+    cursor: pointer;
+}
+
+#prev-btn .current,
+#next-btn .current{
+    display: block;
+}
+#prev-btn .hover ,
+#next-btn .hover{
+    display: none;
+}
+
+#prev-btn:hover .current,
+#next-btn:hover .current{
+    display: none;
+}
+#prev-btn:hover .hover ,
+#next-btn:hover .hover{
+    display: block;
+}
+
+.welcome-content .header {
+    /* background-color:  var(--primary-color); */
+    background-image: linear-gradient(rgb(4 16 98 / 85%), rgb(4 16 98 / 85%)), url(images/group-pic2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.welcome-content .header .header-innertext {
+    width: 70%;
+}
+.welcome-content .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.welcome-content .content img {
+    max-width: 100%;
+    height: auto;
+}
+.welcome-content .welcome-section {
+    /* max-width: 50%; */
+    flex: 1;
+    padding: 0 10% 2rem 2rem;
+}
+.welcome-content .welcome-section h1 {
+    color: var(--secondary-color);
+    font-size: 22px;
+    letter-spacing: 6px;
+}
+.welcome-content .welcome-section h2 {
+    color:  var(--primary-color);
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.welcome-content .welcome-section p {
+    color: #666;
+    margin-top: 20px;
+}
+.welcome-content .welcome-section .quote {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-top: 20px;
+}
+.welcome-content .welcome-section .quote span {
+    color:  var(--primary-color);
+    font-weight: 600;
+}
+.welcome-content .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.welcome-content .stat {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+}
+.welcome-content .stats .stat:nth-child(1) {
+    border-bottom: 3px solid #bec1d4;
+}
+.welcome-content .stats .stat:nth-child(2) {
+    border-bottom: 3px solid #fdc9be;
+}
+.welcome-content .stats .stat:nth-child(3) {
+    border-bottom: 3px solid #b2ece0;
+}
+
+.welcome-content .stat h3 {
+    font-size: 28px;
+    color: #1a3b8b;
+    font-weight: 700;
+}
+.welcome-content .stat p {
+    font-size: 16px;
+    color: #666;
+}
+.welcome-content .stat:nth-child(2) h3 {
+    color: #ff4a17;
+}
+.welcome-content .stat:nth-child(3) h3 {
+    color: #00c4b4;
+}
+.welcome-content .custom-border{
+    border: 2px solid var(--secondary-color) ;
+    width: 25%;
+    margin-top: 2rem;
+}
+
+
+.developer-details {
+    position: relative;
+    background: url(images/revenue2.jpg) no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.developer-details .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(4 16 98 / 80%);
+    z-index: 1;
+}
+.developer-details .container {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 4rem;
+}
+
+.developer-details .quote {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top: 5rem;
+}
+.developer-details .author {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.developer-details .designation {
+    color: #b0b0b0;
+    font-size: 14px;
+}
+.developer-details .image-container img {
+    /* border-radius: 5px; */
+    width: auto;
+    height: 210px;
+    position: absolute;
+    top: 0px;
+    right: 2.5rem;
+}
+.container .row.align-items-center {
+    position: relative;
+}
+.developer-details .image-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.developer-details .author-details {
+    padding: 1.2rem;
+    border-left: 2px solid var(--secondary-color);
+    margin-top: 2rem;
+}
+
+
+.news-section .header {
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin-top: 3rem;
+    font-weight: 600;
+}
+.news-section .title {
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: 700;
+    width: 60%;
+    margin: auto;
+    line-height: 1.2;
+    margin: 1rem auto 2.5rem;
+}
+.news-section .news-banner {
+    /* background-image: url(images/revenueimages.jpg); */
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.news-section .news-item {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    border: none;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.news-section .news-date {
+    background: rgb(4 16 98 / 80%);
+    color: #fff;
+    padding: 5px 15px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.news-section .news-content {
+    padding: 20px;
+}
+.news-section .news-content h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+.news-section .news-content p {
+    color: #666;
+    font-size: 14px;
+    margin: 0 0 20px;
+}
+.news-section .read-more {
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.news-section .news-item:hover .overlay{
+    /* background-image: linear-gradient(rgb(4 16 98 / 80%), rgb(4 16 98 / 80%)), url(images/financial-planning2.jpg); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(4 16 98 / 80%); */
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+.news-section .news-item:hover .news-date {
+    z-index: 2;
+    background-color: rgb(255 69 0 / 60%);
+}
+
+.news-section .news-item:hover .news-content ,
+.news-section .news-item:hover h3 ,
+.news-section .news-item:hover p {
+    z-index: 2;
+    color: #fff;
+    position: relative;
+}
+.news-section .news-item:hover .read-more {
+    background-color: #ff4500;
+}
+
+.video-section .container {
+    text-align: center;
+}
+.video-section .header {
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin-top: 3rem;
+    font-weight: 600;
+}
+.video-section .title {
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: 700;
+    width: 60%;
+    line-height: 1.2;
+    margin: 1rem auto 2.5rem;
+}
+.video-section .video-container {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.video-section .video-container video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.video-section .video-overlay {
+    position: absolute;
+    top: 1px;
+    left: 57px;
+    width: 89.5%;
+    height: 99%;
+    background: rgb(4 16 98 / 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 7px;
+    visibility: hidden;
+}
+.video-section .play-button {
+    width: 80px;
+    height: 80px;
+    background: white;
+    color:var(--secondary-color);
+    font-size: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-section .play-button i {
+    color: #ff4a4a;
+    font-size: 36px;
+}
+.expert-team{
+    background-color: #f4f7fc;
+    margin-top: 4rem;
+}
+.expert-team .container {
+    padding: 50px 0;
+}
+.expert-team .title {
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+.expert-team .subtitle {
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: 700;
+    width: 60%;
+    line-height: 1.2;
+    margin: 1rem auto 2.5rem;
+}
+.expert-team .team-member {
+    background-color: transparent;
+    border-radius: 2px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    border: none;
+}
+.expert-team .team-imgs{
+    /* background-image: url(images/financial-planning2.jpg); */
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.expert-team .team-member:hover .overlay{
+    /* background-image: linear-gradient(rgb(4 16 98 / 85%), rgb(4 16 98 / 85%)), url(images/financial-planning2.jpg); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(4 16 98 / 80%); */
+    z-index: 1;
+    background-size: cover;
+}
+.expert-team .team-member:hover .info {
+    z-index: 2;
+}
+
+.expert-team .team-member:hover .social a,
+.expert-team .team-member:hover h3 ,
+.expert-team .team-member:hover p {
+    z-index: 2;
+    color: #fff!important;
+    position: relative;
+}
+.expert-team .team-member:hover .social a:hover{
+    color: var(--secondary-color)!important;
+}
+
+.expert-team .team-member img {
+    width: 100%;
+    height: auto;
+}
+.expert-team .team-member .info {
+    padding: 20px;
+}
+.expert-team .team-member .info h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+.expert-team .team-member .info p {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+.expert-team .team-member .info .social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.expert-team .team-member .info .social a {
+    color: #7f8c8d;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+.main-footer{
+    background-image: linear-gradient(rgb(4 16 98 / 85%), rgb(4 16 98 / 85%)), url(images/banner-img.jpg);
+}
+.main-footer .container {
+    line-height: 2;
+    padding: 40px 0;
+    color: #ffffff;
+}
+.main-footer  .contact-info img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.main-footer  .contact-info p, .footer .support-info p {
+    margin: 5px 0;
+}
+.main-footer  .helpful-links ul {
+    list-style: none;
+    padding: 0;
+}
+.main-footer  .helpful-links ul li {
+    margin: 5px 0;
+}
+.main-footer  .helpful-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.main-footer  .helpful-links ul li a:hover {
+    text-decoration: underline;
+}
+.main-footer  .support-info .social-icons {
+    margin-top: 20px;
+}
+.main-footer  .support-info .social-icons a {
+    color: #ffffff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.main-footer  .support-info .social-icons a:hover {
+    color: #3498db;
+}
+.main-footer .custom-border {
+    width: 10%;
+    height: 1px;
+    background-color: #fff;
+}
+.main-footer .custom-border.Support {
+    width: 50%;
+    height: 1px;
+    background-color: #fff;
+}
+.main-footer .custom-border.weeklyoffday {
+    width: 50%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.bottom-footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+.bottom-footer .container a {
+    color: #ff5722;
+    text-decoration: none;
+}
+
+
+/* responsive css*/
+
+@media (max-width: 425px) {
+    .top-bar .container {
+        flex-direction: column;
+        align-items: flex-end !important;
+    }
+    .contact-info {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+}
+@media (max-width: 764px) {
+    .developer-details .image-container img{
+        position: relative;
+    }
+    .slider-container .row.flex-nowrap {
+        overflow-x: auto;
+    }
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        margin-left: 13% !important;
+    }
+}
+@media (min-width: 1740px) {
+    .welcome-content {
+        width: 1300px;
+        margin: auto;
+    }
+}
